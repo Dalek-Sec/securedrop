@@ -11,7 +11,8 @@ def make_blueprint(config):
 
     @view.route('/metadata')
     def metadata():
-        meta = {'gpg_fpr': config.JOURNALIST_KEY,
+        meta = {'supported_languages': config.SUPPORTED_LOCALES,
+                'gpg_fpr': config.JOURNALIST_KEY,
                 'sd_version': version.__version__,
                 'server_os': platform.linux_distribution()[1],
                 }
